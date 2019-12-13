@@ -5,9 +5,9 @@ const getData = filePath => {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, 'utf-8', (err, data) => {
       if (err) throw err;
-       inputMass = data.split(',');
-       var numMass = inputMass.map(entry => parseInt(entry));
-       resolve(numMass);
+        inputMass = data.split(',');
+        var numMass = inputMass.map(entry => parseInt(entry));
+        resolve(numMass);
     });
   })
 }
@@ -42,10 +42,3 @@ getData(filePath)
     updatedData[2] = 2;
     processIntCode(updatedData);
   })
-
-
-
-
-
-
-
